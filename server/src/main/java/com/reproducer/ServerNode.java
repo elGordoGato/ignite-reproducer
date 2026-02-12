@@ -25,8 +25,8 @@ public class ServerNode {
         System.out.println("Server node started successfully: " + server.cluster().localNode().id());
 
         try {
-            Class.forName("com.reproducer.example.IgniteDeserializationReproducer$MyPojo");
-            System.out.println("WARNING: MyPojo class found on server!");
+            Class.forName("com.reproducer.MyPojo");
+            System.err.println("WARNING: MyPojo class found on server!");
         } catch (ClassNotFoundException e) {
             System.out.println("MyPojo class NOT found on server (as expected)");
         }
