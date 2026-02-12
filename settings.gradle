@@ -1,0 +1,4 @@
+rootProject.name = 'ignite-reproducer'
+
+include 'server'
+include 'client'
