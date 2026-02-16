@@ -6,3 +6,7 @@ plugins {
 application {
     mainClass = 'com.reproducer.ServerNode'
 }
+
+run {
+    systemProperty "IGNITE_USE_BINARY_ARRAYS", "true"
+}
