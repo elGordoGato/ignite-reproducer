@@ -59,10 +59,10 @@ public class ClientApp {
                 System.out.println("\n--- Test 2: Caching ArrayList with MyPojo ---");
                 IgniteCache<Integer, Object> listCache = ignite.getOrCreateCache("myListCache");
 
-                var listValue = new ArrayList<>();
-                listValue.add(42L);
-                listValue.add("string value");
-                listValue.add(myPojo);
+                Object[] listValue = new Object[3];
+                listValue[0] = 42L;
+                listValue[1] = "string value";
+                listValue[2] = myPojo;
 
                 System.out.println("Putting: " + listValue);
                 listCache.put(key, listValue);
